@@ -1,0 +1,26 @@
+[
+  {
+    "accountID": 2117000,
+    "password": "0147",
+    "money": 10000000.0,
+    "name": "Dang Hai"
+  },
+  {
+    "accountID": 1700020,
+    "password": "123456789",
+    "money": 29060.0,
+    "name": "Mon"
+  },
+  {
+    "accountID": 1234567,
+    "password": "password",
+    "money": 5000.0,
+    "name": "John Doe"
+  },
+  {
+    "accountID": 7654321,
+    "password": "admin",
+    "money": 100000.0,
+    "name": "Jack Linion"
+  }
+]

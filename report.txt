@@ -1,0 +1,73 @@
+1. Development Frameworks trong Containers
+1.1 Frontend Frameworks
+Các frontend frameworks thường được sử dụng để phát triển giao diện người dùng (UI) và trải nghiệm người dùng (UX) trong các ứng dụng web. Một số framework phổ biến bao gồm:
+
+React: Là một thư viện JavaScript mạnh mẽ để xây dựng UI, phát triển bởi Facebook. React cho phép tạo ra các thành phần UI có thể tái sử dụng, giúp tăng cường tính modular và giảm thiểu mã lặp lại. Sử dụng React trong container giúp dễ dàng triển khai và quản lý các phiên bản ứng dụng khác nhau.
+Angular: Được phát triển bởi Google, Angular là một framework toàn diện cung cấp các công cụ và cấu trúc để xây dựng các ứng dụng web phức tạp. Angular hỗ trợ hai-way data binding và dependency injection, giúp tăng cường hiệu suất và quản lý mã hiệu quả hơn.
+Vue.js: Là một framework nhẹ và linh hoạt cho việc phát triển UI. Vue dễ dàng tích hợp vào các dự án hiện có và cung cấp một cách tiếp cận đơn giản để quản lý state và xây dựng các thành phần UI.
+1.2 Backend Frameworks
+Backend frameworks được sử dụng để phát triển logic xử lý và quản lý dữ liệu của ứng dụng. Một số framework phổ biến bao gồm:
+
+Node.js: Là một môi trường runtime JavaScript cho phép chạy JavaScript phía server. Các framework phổ biến trên Node.js bao gồm:
+Express.js: Một framework nhẹ và linh hoạt cho phép phát triển các ứng dụng web và API nhanh chóng.
+NestJS: Một framework progressive sử dụng TypeScript, xây dựng trên các nguyên tắc của Angular, giúp xây dựng các ứng dụng server-side mạnh mẽ.
+Django: Một framework Python mạnh mẽ với triết lý "batteries included", cung cấp nhiều công cụ và thư viện tích hợp sẵn để phát triển ứng dụng web một cách nhanh chóng và hiệu quả.
+Ruby on Rails: Là một framework viết bằng ngôn ngữ Ruby, tập trung vào tính đơn giản và hiệu suất, giúp phát triển ứng dụng web nhanh chóng với cấu trúc rõ ràng.
+1.3 Database Frameworks
+Database frameworks giúp quản lý và tương tác với cơ sở dữ liệu một cách hiệu quả. Một số framework phổ biến bao gồm:
+
+MySQL: Là một hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) phổ biến, được sử dụng rộng rãi trong các ứng dụng web và hệ thống doanh nghiệp.
+PostgreSQL: Là một hệ quản trị cơ sở dữ liệu quan hệ mã nguồn mở, nổi tiếng với tính năng mạnh mẽ và hỗ trợ đầy đủ cho SQL và NoSQL.
+MongoDB: Là một cơ sở dữ liệu NoSQL, giúp lưu trữ dữ liệu dưới dạng JSON-like documents, thích hợp cho các ứng dụng yêu cầu linh hoạt về cấu trúc dữ liệu.
+
+2. Phân Tích Các Lệnh Hữu Dụng Nhất trong Docker
+Docker là một công cụ mạnh mẽ giúp tạo và quản lý các container. Dưới đây là phân tích các lệnh Docker hữu dụng nhất và lý do tại sao chúng quan trọng:
+
+docker build: Lệnh này dùng để tạo một image mới từ một Docker file. Image này sau đó có thể được sử dụng để tạo container. Lệnh docker build rất quan trọng vì nó cho phép tạo ra các môi trường ứng dụng nhất quán và có thể tái sử dụng.
+
+docker build -t myapp:latest .
+
+docker run: Lệnh này dùng để chạy một container từ một image. Nó có thể chỉ định các tùy chọn như cổng mạng, volume, và biến môi trường. Lệnh docker run quan trọng vì nó cho phép khởi động và quản lý các container một cách linh hoạt.
+
+docker run -d -p 8080:80 myapp:latest
+
+docker volume: Lệnh này quản lý các volumes trong Docker, cho phép lưu trữ dữ liệu bền vững ngoài container. Volume rất quan trọng vì nó giúp duy trì dữ liệu ngay cả khi container bị xóa.
+
+docker volume create myvolume
+
+docker ps: Lệnh này liệt kê các container đang chạy, cung cấp thông tin về trạng thái và cấu hình của chúng. docker ps quan trọng vì nó giúp theo dõi và quản lý các container hiện tại.
+
+docker ps
+
+docker stop và docker start: Các lệnh này dùng để dừng và khởi động lại các container. Chúng quan trọng vì giúp quản lý thời gian hoạt động của container mà không cần xóa hoặc tạo lại chúng.
+
+docker stop mycontainer
+docker start mycontainer
+
+docker exec: Lệnh này cho phép thực thi các lệnh bên trong một container đang chạy, giúp gỡ lỗi và quản lý container dễ dàng hơn.
+
+docker exec -it mycontainer bash
+
+docker-compose: Đây là một công cụ để định nghĩa và quản lý multi-container Docker applications. docker-compose quan trọng vì nó đơn giản hóa việc cấu hình và khởi động các ứng dụng phức tạp.
+
+docker-compose up
+
+docker pull: Lệnh này dùng để tải xuống một image từ Docker Hub hoặc từ một registry khác. Lệnh docker pull quan trọng vì nó cho phép dễ dàng lấy các images từ các nguồn khác nhau để sử dụng trong phát triển và triển khai.
+
+docker pull nginx:latest
+
+docker push: Lệnh này dùng để đẩy một image lên Docker Hub hoặc một registry khác. docker push quan trọng vì nó cho phép chia sẻ images với các nhóm phát triển khác hoặc triển khai trên các môi trường khác nhau.
+
+docker push myapp:latest
+
+docker rm: Lệnh này dùng để xóa một container đã dừng. docker rm quan trọng vì nó giúp quản lý và giải phóng tài nguyên bằng cách loại bỏ các container không còn cần thiết.
+
+docker rm mycontainer
+
+docker rmi: Lệnh này dùng để xóa một image từ local Docker registry. docker rmi quan trọng vì nó giúp quản lý và giải phóng không gian đĩa bằng cách loại bỏ các images không còn sử dụng.
+
+docker rmi myimage:latest
+
+docker network: Lệnh này quản lý các networks trong Docker, cho phép cấu hình và quản lý mạng cho các container. docker network quan trọng vì nó giúp thiết lập và quản lý kết nối mạng giữa các container một cách linh hoạt.
+
+docker network create mynetwork
